@@ -1,9 +1,11 @@
-# vvvv runtime (never in repo)
-vvvv/
+# vvvv software package (place vvvv_XX in vvvv/ to run)
+vvvv/vvvv_*/
 
-# Fat / binary assets
-Assets/
-**/Fat*Assets/
+# Fat assets (excluded from repo)
+**/Fat Assets/
+**/FatAssets/
+
+# Build artifacts
 **/*.dll
 **/*.pdb
 **/bin/

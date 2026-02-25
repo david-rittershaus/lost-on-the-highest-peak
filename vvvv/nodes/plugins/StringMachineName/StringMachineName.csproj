@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
   <PropertyGroup>
     <ProjectGuid>{66409B58-B4D6-46CD-90DF-1CBFC8D5CAC2}</ProjectGuid>
@@ -10,7 +10,7 @@
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <OutputPath>bin\$(Platform)\$(Configuration)\</OutputPath>
     <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
-    <ReferencePath>..\..\..\..\vvvv\vvvv_45beta34.2_x64\lib\core\;..\..\..\..\vvvv\vvvv_45beta34.2_x64\lib\nodes\plugins\</ReferencePath>
+    <ReferencePath>..\..\..\vvvv_45beta34.2_x64\lib\core\;..\..\..\vvvv_45beta34.2_x64\lib\nodes\plugins\</ReferencePath>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
     <DefineConstants>DEBUG;TRACE</DefineConstants>
