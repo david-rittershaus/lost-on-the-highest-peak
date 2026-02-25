@@ -1,0 +1,1715 @@
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta34.2.dtd" >
+   <PATCH nodename="C:\Users\David\Desktop\lostonthehighestpeak\Software\Patches\Subpatches\Audio\Schaukel5.v4p" systemname="Schaukel5" filename="D:\MA Arbeit\vvvv\lostonthehighestpeak\Software\Patches\Subpatches\Audio\Schaukel5.v4p" scrollx="0" scrolly="150">
+   <BOUNDS type="Window" left="6480" top="4650" width="20745" height="12720">
+   </BOUNDS>
+   <PACK Name="addonpack" Version="34.1.0">
+   </PACK>
+   <NODE systemname="FileStream (VAudio)" filename="%VVVV%\packs\VVVV.Audio\nodes\plugins\VVVV.Audio.Nodes.dll" nodename="FileStream (VAudio)" componentmode="Hidden" id="210">
+   <BOUNDS type="Node" left="2580" top="3330" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Filename" visible="1" slicecount="1" values="|..\..\..\Assets\Fat Assets\01 - Wind\06 06 Wind, leise heulend und pfeifend (_Willing Mind_)-2.wav|">
+   </PIN>
+   <PIN pinname="Play" visible="1">
+   </PIN>
+   <PIN pinname="Audio Out" visible="1">
+   </PIN>
+   <PIN pinname="Loop" visible="1">
+   </PIN>
+   <PIN pinname="Volume" visible="1">
+   </PIN>
+   <PIN pinname="Position" visible="1">
+   </PIN>
+   <PIN pinname="Speed" slicecount="1" values="1">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="209" systemname="IOBox (String)">
+   <BOUNDS type="Box" left="3855" top="2205" width="2130" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="3855" top="2205" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Input String" slicecount="1" visible="1" values="|..\..\..\Assets\Fat Assets\05 - Marimba\Idlesound.wav|">
+   </PIN>
+   <PIN pinname="Default" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="File Mask" slicecount="1" values="|Audio File (*.wav, *.mp3, *.aiff, *.m4a)||*.wav;*.mp3;*.aiff;*.m4a|">
+   </PIN>
+   <PIN pinname="Maximum Characters" slicecount="1" values="-1">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="Filename">
+   </PIN>
+   <PIN pinname="Output String" visible="1">
+   </PIN>
+   <PIN pinname="Rows" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="SliceCount Mode" slicecount="1" values="ColsRowsPages">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="208" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="2565" top="1890" width="480" height="480">
+   </BOUNDS>
+   <BOUNDS type="Node" left="2565" top="1890" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="1">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Boolean">
+   </PIN>
+   <PIN pinname="Behavior" slicecount="1" values="Toggle">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="Play">
+   </PIN>
+   <PIN pinname="X Input Value" slicecount="1" values="1">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="207" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="2730" top="2685" width="480" height="480">
+   </BOUNDS>
+   <BOUNDS type="Node" left="2730" top="2685" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="1">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Boolean">
+   </PIN>
+   <PIN pinname="Behavior" slicecount="1" values="Toggle">
+   </PIN>
+   <PIN pinname="X Input Value" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="Loop">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="208" srcpinname="Y Output Value" dstnodeid="210" dstpinname="Play">
+   </LINK>
+   <LINK srcnodeid="207" srcpinname="Y Output Value" dstnodeid="210" dstpinname="Loop">
+   </LINK>
+   <NODE nodename="IOBox (Node)" componentmode="InABox" id="206" systemname="IOBox (Node)">
+   <BOUNDS type="Box" left="2535" top="14085" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="2535" top="14085" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Descriptive Name" slicecount="1" values="|Audio Out|">
+   </PIN>
+   <PIN pinname="Input Node" visible="1" slicecount="1" values="||">
+   </PIN>
+   </NODE>
+   <NODE systemname="StereoMixer (VAudio Filter)" filename="%VVVV%\packs\VVVV.Audio\nodes\modules\StereoMixer (VAudio Filter).v4p" nodename="StereoMixer (VAudio Filter)" componentmode="Hidden" id="205">
+   <BOUNDS type="Node" left="2550" top="13575" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Pan" slicecount="1" values="0.5">
+   </PIN>
+   <PIN pinname="Gain" slicecount="1" values="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="205" srcpinname="Output" dstnodeid="206" dstpinname="Input Node">
+   </LINK>
+   <NODE systemname="V2A (VAudio Source)" filename="%VVVV%\packs\VVVV.Audio\nodes\plugins\VVVV.Audio.Nodes.dll" nodename="V2A (VAudio Source)" componentmode="Hidden" id="204">
+   <BOUNDS type="Node" left="2880" top="5190" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Audio Out" visible="1">
+   </PIN>
+   <PIN pinname="Value" visible="1" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Smoothing" slicecount="1" values="0">
+   </PIN>
+   </NODE>
+   <NODE systemname="Multiply (VAudio)" filename="%VVVV%\packs\VVVV.Audio\nodes\plugins\VVVV.Audio.Nodes.dll" nodename="Multiply (VAudio)" componentmode="Hidden" id="203">
+   <BOUNDS type="Node" left="2595" top="5595" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input 1" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Input 2" visible="1">
+   </PIN>
+   <PIN pinname="Audio Out" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="204" srcpinname="Audio Out" dstnodeid="203" dstpinname="Input 2">
+   </LINK>
+   <LINK srcnodeid="210" srcpinname="Audio Out" dstnodeid="203" dstpinname="Input 1">
+   </LINK>
+   <NODE systemname="Multiply (VAudio)" nodename="Multiply (VAudio)" componentmode="Hidden" id="198" filename="%VVVV%\packs\VVVV.Audio\nodes\plugins\VVVV.Audio.Nodes.dll">
+   <BOUNDS type="Node" left="6510" top="7965" width="330" height="270">
+   </BOUNDS>
+   <PIN pinname="Input 1" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Input 2" visible="1">
+   </PIN>
+   <PIN pinname="Audio Out" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="V2A (VAudio Source)" filename="%VVVV%\packs\VVVV.Audio\nodes\plugins\VVVV.Audio.Nodes.dll" nodename="V2A (VAudio Source)" componentmode="Hidden" id="197">
+   <BOUNDS type="Node" left="6795" top="7500" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Audio Out" visible="1">
+   </PIN>
+   <PIN pinname="Value" visible="1" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Smoothing" slicecount="1" values="0">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="197" srcpinname="Audio Out" dstnodeid="198" dstpinname="Input 2">
+   </LINK>
+   <NODE systemname="Add (VAudio)" filename="%VVVV%\packs\VVVV.Audio\nodes\plugins\VVVV.Audio.Nodes.dll" nodename="Add (VAudio)" componentmode="Hidden" id="196">
+   <BOUNDS type="Node" left="2535" top="12150" width="3825" height="270">
+   </BOUNDS>
+   <PIN pinname="Input 1" visible="1">
+   </PIN>
+   <PIN pinname="Input 2" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Audio Out" visible="1">
+   </PIN>
+   <PIN pinname="Input Count" slicecount="1" values="3">
+   </PIN>
+   <PIN pinname="Input 3" visible="1" slicecount="1" values="||">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="203" srcpinname="Audio Out" dstnodeid="196" dstpinname="Input 1">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="194" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="3705" top="1245" width="840" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="3705" top="1245" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="1.36">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="Volume">
+   </PIN>
+   <PIN pinname="SliceCount Mode" slicecount="1" values="ColsRowsPages">
+   </PIN>
+   <PIN pinname="Rows" slicecount="1" values="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="194" srcpinname="Y Output Value" dstnodeid="210" dstpinname="Volume">
+   </LINK>
+   <NODE systemname="Switch (Value Input)" nodename="Switch (Value Input)" componentmode="Hidden" id="193">
+   <BOUNDS type="Node" left="2880" top="4395" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input 1" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Switch" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="Damper (Animation)" nodename="Damper (Animation)" componentmode="Hidden" id="192">
+   <BOUNDS type="Node" left="2880" top="4800" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Go To Position" visible="1">
+   </PIN>
+   <PIN pinname="Position Out" visible="1">
+   </PIN>
+   <PIN pinname="FilterTime" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="193" srcpinname="Output" dstnodeid="192" dstpinname="Go To Position">
+   </LINK>
+   <LINK srcnodeid="192" srcpinname="Position Out" dstnodeid="204" dstpinname="Value">
+   </LINK>
+   <NODE systemname="Damper (Animation)" nodename="Damper (Animation)" componentmode="Hidden" id="191">
+   <BOUNDS type="Node" left="6855" top="6975" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Position Out" visible="1">
+   </PIN>
+   <PIN pinname="Go To Position" visible="1">
+   </PIN>
+   <PIN pinname="FilterTime" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="191" srcpinname="Position Out" dstnodeid="197" dstpinname="Value">
+   </LINK>
+   <NODE systemname="Switch (Value Input)" nodename="Switch (Value Input)" componentmode="Hidden" id="190">
+   <BOUNDS type="Node" left="6855" top="6300" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input 1" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Input 2" slicecount="1" values="5">
+   </PIN>
+   <PIN pinname="Switch" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="190" srcpinname="Output" dstnodeid="191" dstpinname="Go To Position">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="189" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="4860" top="1620" width="480" height="480">
+   </BOUNDS>
+   <BOUNDS type="Node" left="4860" top="1620" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="9" visible="1" values="1,1,1,1,1,1,1,1,1">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Boolean">
+   </PIN>
+   <PIN pinname="Behavior" slicecount="1" values="Toggle">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   <PIN pinname="X Input Value" slicecount="1" values="0">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="189" srcpinname="Y Output Value" dstnodeid="193" dstpinname="Switch">
+   </LINK>
+   <LINK srcnodeid="189" srcpinname="Y Output Value" dstnodeid="190" dstpinname="Switch">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="188" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="4530" top="3390" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="4530" top="3390" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="5">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="s">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="188" srcpinname="Y Output Value" dstnodeid="192" dstpinname="FilterTime">
+   </LINK>
+   <LINK srcnodeid="188" srcpinname="Y Output Value" dstnodeid="191" dstpinname="FilterTime">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="187" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="3015" top="3855" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="3015" top="3855" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="210" srcpinname="Position" dstnodeid="187" dstpinname="Y Input Value">
+   </LINK>
+   <LINK srcnodeid="209" srcpinname="Output String" dstnodeid="210" dstpinname="Filename">
+   </LINK>
+   <NODE systemname="Add (VAudio)" filename="%VVVV%\packs\VVVV.Audio\nodes\plugins\VVVV.Audio.Nodes.dll" nodename="Add (VAudio)" componentmode="Hidden" id="185">
+   <BOUNDS type="Node" left="6510" top="8565" width="16920" height="270">
+   </BOUNDS>
+   <PIN pinname="Input 1" visible="1">
+   </PIN>
+   <PIN pinname="Audio Out" visible="1">
+   </PIN>
+   <PIN pinname="Input 2" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Input Count" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Input 3" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Input 4" visible="1" slicecount="1" values="||">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="198" srcpinname="Audio Out" dstnodeid="185" dstpinname="Input 1">
+   </LINK>
+   <NODE systemname="R (Value)" nodename="R (Value)" componentmode="Hidden" id="182">
+   <BOUNDS type="Node" left="2895" top="150" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Receive String" slicecount="1" values="status.ActiveSwing.All">
+   </PIN>
+   <PIN pinname="Input Value" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="R (Value)" nodename="R (Value)" componentmode="Hidden" id="181">
+   <BOUNDS type="Node" left="9720" top="525" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Receive String" slicecount="1" values="Sensorvalues.S5">
+   </PIN>
+   <PIN pinname="Input Value" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="GetSlice (Spreads)" nodename="GetSlice (Spreads)" componentmode="Hidden" id="180">
+   <BOUNDS type="Node" left="9795" top="1335" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1" slicecount="3" values="0,0,0">
+   </PIN>
+   <PIN pinname="Index" slicecount="1" values="2">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="Map (Value)" nodename="Map (Value)" componentmode="Hidden" id="179">
+   <BOUNDS type="Node" left="9705" top="2985" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Source Minimum" slicecount="1" values="-1">
+   </PIN>
+   <PIN pinname="Source Maximum" slicecount="1" values="1.2">
+   </PIN>
+   <PIN pinname="Destination Minimum" slicecount="1" values="0.15">
+   </PIN>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Destination Maximum" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Mapping" slicecount="1" values="Clamp">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="180" srcpinname="Output" dstnodeid="179" dstpinname="Input">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="178" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="9750" top="3510" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="9750" top="3510" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="179" srcpinname="Output" dstnodeid="178" dstpinname="Y Input Value">
+   </LINK>
+   <NODE systemname="Bounds (Spectral)" nodename="Bounds (Spectral)" componentmode="Hidden" id="177">
+   <BOUNDS type="Node" left="11520" top="3270" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1" slicecount="1" values="-0.042">
+   </PIN>
+   <PIN pinname="Maximum" visible="1">
+   </PIN>
+   <PIN pinname="Error Handling Style" slicecount="1" values="Ignore">
+   </PIN>
+   </NODE>
+   <NODE systemname="Queue (Spreads)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="Queue (Spreads)" componentmode="Hidden" id="176">
+   <BOUNDS type="Node" left="11520" top="2655" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Insert" visible="1">
+   </PIN>
+   <PIN pinname="Frame Count" slicecount="1" values="180">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="180" srcpinname="Output" dstnodeid="176" dstpinname="Input">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="175" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="11670" top="1410" width="480" height="480">
+   </BOUNDS>
+   <BOUNDS type="Node" left="11670" top="1410" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="1">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Boolean">
+   </PIN>
+   <PIN pinname="Behavior" slicecount="1" values="Toggle">
+   </PIN>
+   <PIN pinname="X Input Value" slicecount="1" values="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="175" srcpinname="Y Output Value" dstnodeid="176" dstpinname="Insert">
+   </LINK>
+   <LINK srcnodeid="176" srcpinname="Output" dstnodeid="177" dstpinname="Input">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="174" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="12090" top="3750" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="12090" top="3750" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="177" srcpinname="Maximum" dstnodeid="174" dstpinname="Y Input Value">
+   </LINK>
+   <NODE systemname="GT (Value)" nodename="GT (Value)" componentmode="Hidden" id="173">
+   <BOUNDS type="Node" left="12135" top="4200" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input 2" slicecount="1" values="3">
+   </PIN>
+   <PIN pinname="Input 1" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="177" srcpinname="Maximum" dstnodeid="173" dstpinname="Input 1">
+   </LINK>
+   <NODE systemname="FileStream (VAudio)" filename="%VVVV%\packs\VVVV.Audio\nodes\plugins\VVVV.Audio.Nodes.dll" nodename="FileStream (VAudio)" componentmode="Hidden" id="172">
+   <BOUNDS type="Node" left="12360" top="5625" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Filename" slicecount="1" visible="1" values="|..\..\..\Assets\Fat Assets\01 - Wind\raben_kraehen_loop.wav|">
+   </PIN>
+   <PIN pinname="Play" visible="1">
+   </PIN>
+   <PIN pinname="Loop" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Volume" visible="1" slicecount="1" values="0.2">
+   </PIN>
+   <PIN pinname="Audio Out" visible="1">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="171" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="12345" top="4935" width="480" height="480">
+   </BOUNDS>
+   <BOUNDS type="Node" left="12345" top="4935" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="1">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Boolean">
+   </PIN>
+   <PIN pinname="Behavior" slicecount="1" values="Toggle">
+   </PIN>
+   <PIN pinname="X Input Value" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="Play">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="171" srcpinname="Y Output Value" dstnodeid="172" dstpinname="Play">
+   </LINK>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="170" systemname="IOBox (String)">
+   <BOUNDS type="Box" left="13635" top="4890" width="2385" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="13635" top="4890" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Input String" slicecount="1" visible="1" values="|..\..\..\Assets\Fat Assets\05 - Marimba\14 Pferd mit Ochsenkarren, auf Kopfsteinpflaster auf dem Karren.wav|">
+   </PIN>
+   <PIN pinname="Default" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="File Mask" slicecount="1" values="|Audio File (*.wav, *.mp3, *.aiff, *.m4a)||*.wav;*.mp3;*.aiff;*.m4a|">
+   </PIN>
+   <PIN pinname="Maximum Characters" slicecount="1" values="-1">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="Filename">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="170" srcpinname="Output String" dstnodeid="172" dstpinname="Filename">
+   </LINK>
+   <NODE systemname="Multiply (VAudio)" nodename="Multiply (VAudio)" componentmode="Hidden" id="169" filename="%VVVV%\packs\VVVV.Audio\nodes\plugins\VVVV.Audio.Nodes.dll">
+   <BOUNDS type="Node" left="12405" top="7200" width="330" height="270">
+   </BOUNDS>
+   <PIN pinname="Input 1" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Input 2" visible="1">
+   </PIN>
+   <PIN pinname="Audio Out" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="V2A (VAudio Source)" filename="%VVVV%\packs\VVVV.Audio\nodes\plugins\VVVV.Audio.Nodes.dll" nodename="V2A (VAudio Source)" componentmode="Hidden" id="168">
+   <BOUNDS type="Node" left="12630" top="6735" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Audio Out" visible="1">
+   </PIN>
+   <PIN pinname="Value" visible="1" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Smoothing" slicecount="1" values="0.2">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="168" srcpinname="Audio Out" dstnodeid="169" dstpinname="Input 2">
+   </LINK>
+   <NODE systemname="Switch (Value Input)" nodename="Switch (Value Input)" componentmode="Hidden" id="167">
+   <BOUNDS type="Node" left="11520" top="5685" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input 2" slicecount="1" visible="1" values="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Switch" visible="1">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="166" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="13515" top="4350" width="825" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="13515" top="4350" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0.35">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="Damper (Animation)" nodename="Damper (Animation)" componentmode="Hidden" id="165">
+   <BOUNDS type="Node" left="11355" top="6390" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Go To Position" visible="1">
+   </PIN>
+   <PIN pinname="Position Out" visible="1">
+   </PIN>
+   <PIN pinname="FilterTime" slicecount="1" visible="1" values="3.5">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="172" srcpinname="Audio Out" dstnodeid="169" dstpinname="Input 1">
+   </LINK>
+   <LINK srcnodeid="167" srcpinname="Output" dstnodeid="165" dstpinname="Go To Position">
+   </LINK>
+   <LINK srcnodeid="165" srcpinname="Position Out" dstnodeid="168" dstpinname="Value">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="164" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="11550" top="6045" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="11550" top="6045" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="2">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="s">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="164" srcpinname="Y Output Value" dstnodeid="165" dstpinname="FilterTime">
+   </LINK>
+   <LINK srcnodeid="173" srcpinname="Output" dstnodeid="167" dstpinname="Switch">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="163" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="11310" top="4545" width="480" height="480">
+   </BOUNDS>
+   <BOUNDS type="Node" left="11310" top="4545" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Boolean">
+   </PIN>
+   <PIN pinname="Behavior" slicecount="1" values="Toggle">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="173" srcpinname="Output" dstnodeid="163" dstpinname="Y Input Value">
+   </LINK>
+   <NODE systemname="GT (Value)" nodename="GT (Value)" componentmode="Hidden" id="162">
+   <BOUNDS type="Node" left="14055" top="3135" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input 1" visible="1" slicecount="1" values="0.0069">
+   </PIN>
+   <PIN pinname="Input 2" slicecount="1" values="1.4">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="Multiply (VAudio)" nodename="Multiply (VAudio)" componentmode="Hidden" id="161" filename="%VVVV%\packs\VVVV.Audio\nodes\plugins\VVVV.Audio.Nodes.dll">
+   <BOUNDS type="Node" left="12435" top="8040" width="330" height="270">
+   </BOUNDS>
+   <PIN pinname="Input 1" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Input 2" visible="1">
+   </PIN>
+   <PIN pinname="Audio Out" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="V2A (VAudio Source)" filename="%VVVV%\packs\VVVV.Audio\nodes\plugins\VVVV.Audio.Nodes.dll" nodename="V2A (VAudio Source)" componentmode="Hidden" id="160">
+   <BOUNDS type="Node" left="12630" top="7740" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Audio Out" visible="1">
+   </PIN>
+   <PIN pinname="Value" visible="1" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Smoothing" slicecount="1" values="0">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="160" srcpinname="Audio Out" dstnodeid="161" dstpinname="Input 2">
+   </LINK>
+   <LINK srcnodeid="191" srcpinname="Position Out" dstnodeid="160" dstpinname="Value">
+   </LINK>
+   <NODE systemname="Add (VAudio)" filename="%VVVV%\packs\VVVV.Audio\nodes\plugins\VVVV.Audio.Nodes.dll" nodename="Add (VAudio)" componentmode="Hidden" id="159">
+   <BOUNDS type="Node" left="1425" top="12885" width="1170" height="270">
+   </BOUNDS>
+   <PIN pinname="Input 2" visible="1">
+   </PIN>
+   <PIN pinname="Audio Out" visible="1">
+   </PIN>
+   <PIN pinname="Input 1" visible="1" slicecount="1" values="||">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="196" srcpinname="Audio Out" dstnodeid="159" dstpinname="Input 2">
+   </LINK>
+   <LINK srcnodeid="159" srcpinname="Audio Out" dstnodeid="205" dstpinname="Input">
+   </LINK>
+   <NODE systemname="TogEdge (Animation)" nodename="TogEdge (Animation)" componentmode="Hidden" id="158">
+   <BOUNDS type="Node" left="4845" top="2730" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Up Edge" visible="1">
+   </PIN>
+   <PIN pinname="Down Edge" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="189" srcpinname="Y Output Value" dstnodeid="158" dstpinname="Input">
+   </LINK>
+   <NODE systemname="Stopwatch (Animation)" nodename="Stopwatch (Animation)" componentmode="Hidden" id="157">
+   <BOUNDS type="Node" left="4830" top="4470" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Run" visible="1" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Reset" visible="1">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="156" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="4875" top="5235" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="4875" top="5235" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Units" slicecount="1" values="s">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="157" srcpinname="Output" dstnodeid="156" dstpinname="Y Input Value">
+   </LINK>
+   <LINK srcnodeid="189" srcpinname="Y Output Value" dstnodeid="157" dstpinname="Run">
+   </LINK>
+   <LINK srcnodeid="158" srcpinname="Down Edge" dstnodeid="157" dstpinname="Reset">
+   </LINK>
+   <NODE systemname="GetSlice (Spreads)" nodename="GetSlice (Spreads)" componentmode="Hidden" id="155">
+   <BOUNDS type="Node" left="13380" top="1545" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1" slicecount="3" values="0,0,0">
+   </PIN>
+   <PIN pinname="Index" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="154" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="13815" top="2040" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="13815" top="2040" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="155" srcpinname="Output" dstnodeid="154" dstpinname="Y Input Value">
+   </LINK>
+   <LINK srcnodeid="161" srcpinname="Audio Out" dstnodeid="185" dstpinname="Input 2">
+   </LINK>
+   <NODE systemname="GetSlice (Spreads)" nodename="GetSlice (Spreads)" componentmode="Hidden" id="147">
+   <BOUNDS type="Node" left="14370" top="1410" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1" slicecount="3" values="0,0,0">
+   </PIN>
+   <PIN pinname="Index" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="146" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="15045" top="2115" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="15045" top="2115" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="147" srcpinname="Output" dstnodeid="146" dstpinname="Y Input Value">
+   </LINK>
+   <LINK srcnodeid="166" srcpinname="Y Output Value" dstnodeid="172" dstpinname="Volume">
+   </LINK>
+   <NODE systemname="GT (Value)" nodename="GT (Value)" componentmode="Hidden" id="145">
+   <BOUNDS type="Node" left="17940" top="2295" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input 2" slicecount="1" values="0.1">
+   </PIN>
+   <PIN pinname="Input 1" visible="1" slicecount="1" values="0.0341">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="169" srcpinname="Audio Out" dstnodeid="161" dstpinname="Input 1">
+   </LINK>
+   <LINK srcnodeid="155" srcpinname="Output" dstnodeid="145" dstpinname="Input 1">
+   </LINK>
+   <NODE systemname="MonoFlop (Animation)" nodename="MonoFlop (Animation)" componentmode="Hidden" id="143">
+   <BOUNDS type="Node" left="17955" top="3300" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Set" slicecount="1" visible="1" values="0">
+   </PIN>
+   <PIN pinname="Time" slicecount="1" values="1.5">
+   </PIN>
+   </NODE>
+   <NODE systemname="GT (Value)" nodename="GT (Value)" componentmode="Hidden" id="142">
+   <BOUNDS type="Node" left="18510" top="2295" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input 2" slicecount="1" values="0.1">
+   </PIN>
+   <PIN pinname="Input 1" visible="1" slicecount="1" values="0.0341">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="OR (Boolean)" nodename="OR (Boolean)" componentmode="Hidden" id="141">
+   <BOUNDS type="Node" left="17985" top="2640" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input 1" visible="1">
+   </PIN>
+   <PIN pinname="Input 2" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="145" srcpinname="Output" dstnodeid="141" dstpinname="Input 1">
+   </LINK>
+   <LINK srcnodeid="142" srcpinname="Output" dstnodeid="141" dstpinname="Input 2">
+   </LINK>
+   <LINK srcnodeid="141" srcpinname="Output" dstnodeid="143" dstpinname="Set">
+   </LINK>
+   <LINK srcnodeid="147" srcpinname="Output" dstnodeid="142" dstpinname="Input 1">
+   </LINK>
+   <NODE systemname="TogEdge (Animation)" nodename="TogEdge (Animation)" componentmode="Hidden" id="138">
+   <BOUNDS type="Node" left="15495" top="3750" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Up Edge" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="162" srcpinname="Output" dstnodeid="138" dstpinname="Input">
+   </LINK>
+   <NODE systemname="GetSlice (Node)" nodename="GetSlice (Node)" componentmode="Hidden" id="135">
+   <BOUNDS type="Node" left="17145" top="6195" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input Node" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Bin Size" slicecount="1" values="2">
+   </PIN>
+   <PIN pinname="Output Node" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="Multiply (VAudio)" nodename="Multiply (VAudio)" componentmode="Hidden" id="134" filename="%VVVV%\packs\VVVV.Audio\nodes\plugins\VVVV.Audio.Nodes.dll">
+   <BOUNDS type="Node" left="17280" top="7365" width="330" height="270">
+   </BOUNDS>
+   <PIN pinname="Input 1" visible="1" slicecount="2" values=",">
+   </PIN>
+   <PIN pinname="Input 2" visible="1">
+   </PIN>
+   <PIN pinname="Audio Out" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="V2A (VAudio Source)" filename="%VVVV%\packs\VVVV.Audio\nodes\plugins\VVVV.Audio.Nodes.dll" nodename="V2A (VAudio Source)" componentmode="Hidden" id="133">
+   <BOUNDS type="Node" left="17490" top="6945" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Audio Out" visible="1">
+   </PIN>
+   <PIN pinname="Value" visible="1" slicecount="1" values="0.5">
+   </PIN>
+   <PIN pinname="Smoothing" slicecount="1" values="0">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="133" srcpinname="Audio Out" dstnodeid="134" dstpinname="Input 2">
+   </LINK>
+   <LINK srcnodeid="135" srcpinname="Output Node" dstnodeid="134" dstpinname="Input 1">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="132" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="17490" top="6600" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="17490" top="6600" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0.08">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="132" srcpinname="Y Output Value" dstnodeid="133" dstpinname="Value">
+   </LINK>
+   <NODE systemname="Multiply (VAudio)" nodename="Multiply (VAudio)" componentmode="Hidden" id="131" filename="%VVVV%\packs\VVVV.Audio\nodes\plugins\VVVV.Audio.Nodes.dll">
+   <BOUNDS type="Node" left="17400" top="8055" width="330" height="270">
+   </BOUNDS>
+   <PIN pinname="Input 1" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Input 2" visible="1">
+   </PIN>
+   <PIN pinname="Audio Out" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="V2A (VAudio Source)" filename="%VVVV%\packs\VVVV.Audio\nodes\plugins\VVVV.Audio.Nodes.dll" nodename="V2A (VAudio Source)" componentmode="Hidden" id="130">
+   <BOUNDS type="Node" left="17595" top="7755" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Audio Out" visible="1">
+   </PIN>
+   <PIN pinname="Value" visible="1" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Smoothing" slicecount="1" values="0">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="130" srcpinname="Audio Out" dstnodeid="131" dstpinname="Input 2">
+   </LINK>
+   <LINK srcnodeid="134" srcpinname="Audio Out" dstnodeid="131" dstpinname="Input 1">
+   </LINK>
+   <LINK srcnodeid="131" srcpinname="Audio Out" dstnodeid="185" dstpinname="Input 3">
+   </LINK>
+   <LINK srcnodeid="191" srcpinname="Position Out" dstnodeid="130" dstpinname="Value">
+   </LINK>
+   <NODE systemname="MidiNote (VAudio Join)" filename="%VVVV%\packs\VVVV.Audio\nodes\modules\MidiNote (VAudio Join).v4p" nodename="MidiNote (VAudio Join)" componentmode="Hidden" id="127">
+   <BOUNDS type="Node" left="21000" top="5085" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Play" visible="1" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Note Name" visible="1">
+   </PIN>
+   <PIN pinname="Note" slicecount="1" visible="1" values="48">
+   </PIN>
+   <PIN pinname="Events" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="143" srcpinname="Output" dstnodeid="127" dstpinname="Play">
+   </LINK>
+   <NODE systemname="GetSlice (Node)" nodename="GetSlice (Node)" componentmode="Hidden" id="126">
+   <BOUNDS type="Node" left="21735" top="6120" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input Node" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Bin Size" slicecount="1" values="2">
+   </PIN>
+   <PIN pinname="Output Node" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="Multiply (VAudio)" nodename="Multiply (VAudio)" componentmode="Hidden" id="125" filename="%VVVV%\packs\VVVV.Audio\nodes\plugins\VVVV.Audio.Nodes.dll">
+   <BOUNDS type="Node" left="21870" top="7290" width="330" height="270">
+   </BOUNDS>
+   <PIN pinname="Input 1" visible="1" slicecount="2" values=",">
+   </PIN>
+   <PIN pinname="Input 2" visible="1">
+   </PIN>
+   <PIN pinname="Audio Out" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="V2A (VAudio Source)" filename="%VVVV%\packs\VVVV.Audio\nodes\plugins\VVVV.Audio.Nodes.dll" nodename="V2A (VAudio Source)" componentmode="Hidden" id="124">
+   <BOUNDS type="Node" left="22080" top="6870" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Audio Out" visible="1">
+   </PIN>
+   <PIN pinname="Value" visible="1" slicecount="1" values="0.5">
+   </PIN>
+   <PIN pinname="Smoothing" slicecount="1" values="0">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="124" srcpinname="Audio Out" dstnodeid="125" dstpinname="Input 2">
+   </LINK>
+   <LINK srcnodeid="126" srcpinname="Output Node" dstnodeid="125" dstpinname="Input 1">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="123" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="22080" top="6525" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="22080" top="6525" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0.1">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="123" srcpinname="Y Output Value" dstnodeid="124" dstpinname="Value">
+   </LINK>
+   <NODE systemname="Multiply (VAudio)" nodename="Multiply (VAudio)" componentmode="Hidden" id="122" filename="%VVVV%\packs\VVVV.Audio\nodes\plugins\VVVV.Audio.Nodes.dll">
+   <BOUNDS type="Node" left="21990" top="7980" width="330" height="270">
+   </BOUNDS>
+   <PIN pinname="Input 1" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Input 2" visible="1">
+   </PIN>
+   <PIN pinname="Audio Out" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="V2A (VAudio Source)" filename="%VVVV%\packs\VVVV.Audio\nodes\plugins\VVVV.Audio.Nodes.dll" nodename="V2A (VAudio Source)" componentmode="Hidden" id="121">
+   <BOUNDS type="Node" left="22185" top="7680" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Audio Out" visible="1">
+   </PIN>
+   <PIN pinname="Value" visible="1" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Smoothing" slicecount="1" values="0">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="121" srcpinname="Audio Out" dstnodeid="122" dstpinname="Input 2">
+   </LINK>
+   <LINK srcnodeid="125" srcpinname="Audio Out" dstnodeid="122" dstpinname="Input 1">
+   </LINK>
+   <LINK srcnodeid="122" srcpinname="Audio Out" dstnodeid="185" dstpinname="Input 4">
+   </LINK>
+   <NODE systemname="V2A (VAudio Source)" filename="%VVVV%\packs\VVVV.Audio\nodes\plugins\VVVV.Audio.Nodes.dll" nodename="V2A (VAudio Source)" componentmode="Hidden" id="120">
+   <BOUNDS type="Node" left="1635" top="7590" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Audio Out" visible="1">
+   </PIN>
+   <PIN pinname="Value" visible="1" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Smoothing" slicecount="1" values="0">
+   </PIN>
+   </NODE>
+   <NODE systemname="Multiply (VAudio)" filename="%VVVV%\packs\VVVV.Audio\nodes\plugins\VVVV.Audio.Nodes.dll" nodename="Multiply (VAudio)" componentmode="Hidden" id="119">
+   <BOUNDS type="Node" left="1350" top="7995" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input 1" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Input 2" visible="1">
+   </PIN>
+   <PIN pinname="Audio Out" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="120" srcpinname="Audio Out" dstnodeid="119" dstpinname="Input 2">
+   </LINK>
+   <NODE systemname="FileStream (VAudio)" filename="%VVVV%\packs\VVVV.Audio\nodes\plugins\VVVV.Audio.Nodes.dll" nodename="FileStream (VAudio)" componentmode="Hidden" id="118">
+   <BOUNDS type="Node" left="1170" top="6360" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Play" visible="1" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Do Seek" visible="1" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Filename" slicecount="1" values="|..\..\..\Assets\Fat Assets\05 - Marimba\1 1-Kontakt 5 (eingefroren).wav|">
+   </PIN>
+   <PIN pinname="Audio Out" visible="1">
+   </PIN>
+   <PIN pinname="Volume" slicecount="1" values="0.7">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="118" srcpinname="Audio Out" dstnodeid="119" dstpinname="Input 1">
+   </LINK>
+   <NODE systemname="FlipFlop (Animation)" nodename="FlipFlop (Animation)" componentmode="Hidden" id="117">
+   <BOUNDS type="Node" left="1140" top="5505" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Set" visible="1" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Reset" visible="1" slicecount="1" values="0">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="117" srcpinname="Output" dstnodeid="118" dstpinname="Play">
+   </LINK>
+   <LINK srcnodeid="158" srcpinname="Up Edge" dstnodeid="117" dstpinname="Set">
+   </LINK>
+   <LINK srcnodeid="158" srcpinname="Down Edge" dstnodeid="117" dstpinname="Reset">
+   </LINK>
+   <LINK srcnodeid="158" srcpinname="Down Edge" dstnodeid="118" dstpinname="Do Seek">
+   </LINK>
+   <LINK srcnodeid="119" srcpinname="Audio Out" dstnodeid="159" dstpinname="Input 1">
+   </LINK>
+   <NODE systemname="GetSlice (Node)" nodename="GetSlice (Node)" componentmode="Hidden" id="213">
+   <BOUNDS type="Node" left="6945" top="4740" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input Node" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Bin Size" slicecount="1" values="2">
+   </PIN>
+   <PIN pinname="Output Node" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="MidiNote (VAudio Join)" filename="%VVVV%\packs\VVVV.Audio\nodes\modules\MidiNote (VAudio Join).v4p" nodename="MidiNote (VAudio Join)" componentmode="Hidden" id="216">
+   <BOUNDS type="Node" left="7230" top="3660" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Events" visible="1">
+   </PIN>
+   <PIN pinname="Note Name" visible="1">
+   </PIN>
+   <PIN pinname="Note" slicecount="1" values="36">
+   </PIN>
+   <PIN pinname="Play" visible="1" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Velocity" slicecount="1" visible="1" values="1">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="217" systemname="IOBox (String)">
+   <BOUNDS type="Box" left="8250" top="4170" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="8250" top="4170" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Default" slicecount="1" values="text">
+   </PIN>
+   <PIN pinname="File Mask" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Maximum Characters" slicecount="1" values="-1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="216" srcpinname="Note Name" dstnodeid="217" dstpinname="Input String">
+   </LINK>
+   <NODE systemname="LFO (Animation)" nodename="LFO (Animation)" componentmode="Hidden" id="219">
+   <BOUNDS type="Node" left="8055" top="2925" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Change" visible="1">
+   </PIN>
+   <PIN pinname="Period" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="MidiFilePlayer (VAudio)" filename="%VVVV%\packs\VVVV.Audio\nodes\modules\MidiFilePlayer (VAudio).v4p" nodename="MidiFilePlayer (VAudio)" componentmode="Hidden" id="233">
+   <BOUNDS type="Node" left="17250" top="5025" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="File Name" slicecount="1" visible="1" values="|..\..\..\Assets\Fat Assets\05 - Marimba\peak_midi03.mid|">
+   </PIN>
+   <PIN pinname="Read" visible="1" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Events" visible="1">
+   </PIN>
+   <PIN pinname="Restart" slicecount="1" visible="1" values="0">
+   </PIN>
+   <PIN pinname="Beat Input" slicecount="1" visible="1" values="59.96940287226">
+   </PIN>
+   <BOUNDS type="Window" left="315" top="1920" width="9600" height="13680">
+   </BOUNDS>
+   <PIN pinname="All Notes Off" slicecount="1" visible="1" values="0">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="236" systemname="IOBox (String)">
+   <BOUNDS type="Box" left="18570" top="3660" width="3090" height="600">
+   </BOUNDS>
+   <BOUNDS type="Node" left="18570" top="3660" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Input String" slicecount="6" visible="1" values="|..\..\..\Assets\Fat Assets\05 - Marimba\peak_midi01.mid|,|..\..\..\Assets\Fat Assets\05 - Marimba\peak_midi01.mid|,|..\..\..\Assets\Fat Assets\05 - Marimba\peak_midi02.mid|,|..\..\..\Assets\Fat Assets\05 - Marimba\peak_midi03.mid|,|..\..\..\Assets\Fat Assets\05 - Marimba\peak_midi04.mid|,|..\..\..\Assets\Fat Assets\05 - Marimba\peak_midi05.mid|">
+   </PIN>
+   <PIN pinname="Default" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="File Mask" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Maximum Characters" slicecount="1" values="-1">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="Filename">
+   </PIN>
+   <PIN pinname="Output String" visible="1">
+   </PIN>
+   <PIN pinname="Rows" slicecount="1" values="6">
+   </PIN>
+   <PIN pinname="SliceCount Mode" slicecount="1" values="ColsRowsPages">
+   </PIN>
+   </NODE>
+   <NODE systemname="GetSlice (String)" nodename="GetSlice (String)" componentmode="Hidden" id="237">
+   <BOUNDS type="Node" left="18645" top="4545" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Index" visible="1" slicecount="1" values="2">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="236" srcpinname="Output String" dstnodeid="237" dstpinname="Input">
+   </LINK>
+   <NODE systemname="Counter (Animation)" nodename="Counter (Animation)" componentmode="Hidden" id="238">
+   <BOUNDS type="Node" left="19170" top="5160" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Up" visible="1" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Maximum" slicecount="1" values="5">
+   </PIN>
+   <PIN pinname="Mode" slicecount="1" values="Wrap">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="191" srcpinname="Position Out" dstnodeid="121" dstpinname="Value">
+   </LINK>
+   <NODE systemname="Map (Value)" nodename="Map (Value)" componentmode="Hidden" id="239">
+   <BOUNDS type="Node" left="7980" top="2505" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Source Maximum" slicecount="1" values="2">
+   </PIN>
+   <PIN pinname="Destination Minimum" slicecount="1" values="2.5">
+   </PIN>
+   <PIN pinname="Destination Maximum" slicecount="1" values="0.9">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="177" srcpinname="Maximum" dstnodeid="239" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="239" srcpinname="Output" dstnodeid="219" dstpinname="Period">
+   </LINK>
+   <NODE systemname="R (Value)" nodename="R (Value)" componentmode="Hidden" id="243">
+   <BOUNDS type="Node" left="16650" top="3765" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input Value" visible="1">
+   </PIN>
+   <PIN pinname="Receive String" slicecount="1" values="globals.Beat">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="138" srcpinname="Up Edge" dstnodeid="238" dstpinname="Up">
+   </LINK>
+   <NODE systemname="Switch (Value Input)" nodename="Switch (Value Input)" componentmode="Hidden" id="245">
+   <BOUNDS type="Node" left="16350" top="4620" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input 2" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Switch" visible="1" slicecount="1" values="0">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="243" srcpinname="Input Value" dstnodeid="245" dstpinname="Input 2">
+   </LINK>
+   <LINK srcnodeid="245" srcpinname="Output" dstnodeid="233" dstpinname="Beat Input">
+   </LINK>
+   <NODE systemname="R (Value)" nodename="R (Value)" componentmode="Hidden" id="246">
+   <BOUNDS type="Node" left="7080" top="960" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Receive String" slicecount="1" values="globals.Beat">
+   </PIN>
+   <PIN pinname="Input Value" visible="1">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="247" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="17550" top="4305" width="480" height="480">
+   </BOUNDS>
+   <BOUNDS type="Node" left="17550" top="4305" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Boolean">
+   </PIN>
+   <PIN pinname="Behavior" slicecount="1" values="Bang">
+   </PIN>
+   <PIN pinname="X Input Value" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="247" srcpinname="Y Output Value" dstnodeid="233" dstpinname="Restart">
+   </LINK>
+   <LINK srcnodeid="237" srcpinname="Output" dstnodeid="233" dstpinname="File Name">
+   </LINK>
+   <LINK srcnodeid="247" srcpinname="Y Output Value" dstnodeid="233" dstpinname="Read">
+   </LINK>
+   <LINK srcnodeid="138" srcpinname="Up Edge" dstnodeid="247" dstpinname="Y Input Value">
+   </LINK>
+   <LINK srcnodeid="238" srcpinname="Output" dstnodeid="237" dstpinname="Index">
+   </LINK>
+   <NODE systemname="MonoFlop (Animation)" nodename="MonoFlop (Animation)" componentmode="Hidden" id="248">
+   <BOUNDS type="Node" left="15645" top="4245" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Set" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="138" srcpinname="Up Edge" dstnodeid="248" dstpinname="Set">
+   </LINK>
+   <LINK srcnodeid="180" srcpinname="Output" dstnodeid="162" dstpinname="Input 1">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="249" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="14085" top="3495" width="480" height="480">
+   </BOUNDS>
+   <BOUNDS type="Node" left="14085" top="3495" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Boolean">
+   </PIN>
+   <PIN pinname="Behavior" slicecount="1" values="Toggle">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="162" srcpinname="Output" dstnodeid="249" dstpinname="Y Input Value">
+   </LINK>
+   <LINK srcnodeid="248" srcpinname="Output" dstnodeid="245" dstpinname="Switch">
+   </LINK>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="250" systemname="IOBox (String)">
+   <BOUNDS type="Box" left="22050" top="5475" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="22050" top="5475" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Default" slicecount="1" values="text">
+   </PIN>
+   <PIN pinname="File Mask" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Maximum Characters" slicecount="1" values="-1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="127" srcpinname="Note Name" dstnodeid="250" dstpinname="Input String">
+   </LINK>
+   <NODE systemname="Random (Value)" nodename="Random (Value)" componentmode="Hidden" id="251">
+   <BOUNDS type="Node" left="21870" top="4050" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Is Integer" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Scale" slicecount="1" values="10">
+   </PIN>
+   <PIN pinname="Enabled" slicecount="1" visible="1" values="0">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="TogEdge (Animation)" nodename="TogEdge (Animation)" componentmode="Hidden" id="252">
+   <BOUNDS type="Node" left="19245" top="3000" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Up Edge" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="252" srcpinname="Up Edge" dstnodeid="251" dstpinname="Enabled">
+   </LINK>
+   <NODE systemname="Map (Value)" nodename="Map (Value)" componentmode="Hidden" id="253">
+   <BOUNDS type="Node" left="22035" top="4395" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Source Maximum" slicecount="1" values="10">
+   </PIN>
+   <PIN pinname="Destination Minimum" slicecount="1" values="45">
+   </PIN>
+   <PIN pinname="Destination Maximum" slicecount="1" values="55">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="251" srcpinname="Output" dstnodeid="253" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="253" srcpinname="Output" dstnodeid="127" dstpinname="Note">
+   </LINK>
+   <LINK srcnodeid="141" srcpinname="Output" dstnodeid="252" dstpinname="Input">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="255" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="21555" top="2730" width="480" height="480">
+   </BOUNDS>
+   <BOUNDS type="Node" left="21555" top="2730" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Boolean">
+   </PIN>
+   <PIN pinname="Behavior" slicecount="1" values="Toggle">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="141" srcpinname="Output" dstnodeid="255" dstpinname="Y Input Value">
+   </LINK>
+   <NODE systemname="Frac (Value)" nodename="Frac (Value)" componentmode="Hidden" id="256">
+   <BOUNDS type="Node" left="6945" top="1350" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Whole Part" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="246" srcpinname="Input Value" dstnodeid="256" dstpinname="Input">
+   </LINK>
+   <NODE systemname="Change (Animation)" nodename="Change (Animation)" componentmode="Hidden" id="257">
+   <BOUNDS type="Node" left="6930" top="1725" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="OnChange" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="256" srcpinname="Whole Part" dstnodeid="257" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="257" srcpinname="OnChange" dstnodeid="216" dstpinname="Play">
+   </LINK>
+   <LINK srcnodeid="179" srcpinname="Output" dstnodeid="216" dstpinname="Velocity">
+   </LINK>
+   <NODE systemname="Damper (Animation)" nodename="Damper (Animation)" componentmode="Hidden" id="269">
+   <BOUNDS type="Node" left="3945" top="10836" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Position Out" visible="1">
+   </PIN>
+   <PIN pinname="Go To Position" visible="1" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="FilterTime" visible="1" slicecount="1" values="2.5">
+   </PIN>
+   </NODE>
+   <NODE systemname="V2A (VAudio Source)" filename="%VVVV%\packs\VVVV.Audio\nodes\plugins\VVVV.Audio.Nodes.dll" nodename="V2A (VAudio Source)" componentmode="Hidden" id="268">
+   <BOUNDS type="Node" left="3945" top="11226" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Value" visible="1">
+   </PIN>
+   <PIN pinname="Audio Out" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="269" srcpinname="Position Out" dstnodeid="268" dstpinname="Value">
+   </LINK>
+   <NODE systemname="Multiply (VAudio)" nodename="Multiply (VAudio)" componentmode="Hidden" id="267" filename="%VVVV%\packs\VVVV.Audio\nodes\plugins\VVVV.Audio.Nodes.dll">
+   <BOUNDS type="Node" left="3750" top="11766" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input 2" visible="1">
+   </PIN>
+   <PIN pinname="Audio Out" visible="1">
+   </PIN>
+   <PIN pinname="Input 1" visible="1" slicecount="1" values="||">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="268" srcpinname="Audio Out" dstnodeid="267" dstpinname="Input 2">
+   </LINK>
+   <NODE systemname="LiedSchaukel1" filename="Lied\LiedSchaukel1.v4p" nodename="Lied\LiedSchaukel1.v4p" componentmode="Hidden" id="266">
+   <BOUNDS type="Node" left="3751" top="9525" width="0" height="0">
+   </BOUNDS>
+   <BOUNDS type="Box" left="0" top="6048" width="8755" height="6955">
+   </BOUNDS>
+   <BOUNDS type="Window" left="375" top="2100" width="11430" height="9195">
+   </BOUNDS>
+   <PIN pinname="alle bedingungen erfüllt" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="played" visible="1">
+   </PIN>
+   <PIN pinname="schaukelnr" visible="1">
+   </PIN>
+   <PIN pinname="Volume" visible="1">
+   </PIN>
+   <PIN pinname="schaukel aktiv" visible="1" slicecount="1" values="0">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="266" srcpinname="Audio Out" dstnodeid="267" dstpinname="Input 1">
+   </LINK>
+   <NODE systemname="Multiply (VAudio)" filename="%VVVV%\packs\VVVV.Audio\nodes\plugins\VVVV.Audio.Nodes.dll" nodename="Multiply (VAudio)" componentmode="Hidden" id="265">
+   <BOUNDS type="Node" left="5055" top="11481" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input 1" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Input 2" visible="1">
+   </PIN>
+   <PIN pinname="Audio Out" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="V2A (VAudio Source)" filename="%VVVV%\packs\VVVV.Audio\nodes\plugins\VVVV.Audio.Nodes.dll" nodename="V2A (VAudio Source)" componentmode="Hidden" id="264">
+   <BOUNDS type="Node" left="5265" top="10956" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Audio Out" visible="1">
+   </PIN>
+   <PIN pinname="Value" visible="1" slicecount="1" values="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="264" srcpinname="Audio Out" dstnodeid="265" dstpinname="Input 2">
+   </LINK>
+   <NODE systemname="Switch (Value Input)" nodename="Switch (Value Input)" componentmode="Hidden" id="263">
+   <BOUNDS type="Node" left="3915" top="10161" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Switch" visible="1" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Input 2" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="266" srcpinname="alle bedingungen erfüllt" dstnodeid="263" dstpinname="Switch">
+   </LINK>
+   <LINK srcnodeid="263" srcpinname="Output" dstnodeid="269" dstpinname="Go To Position">
+   </LINK>
+   <NODE systemname="Switch (Value Input)" nodename="Switch (Value Input)" componentmode="Hidden" id="262">
+   <BOUNDS type="Node" left="5265" top="10026" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Switch" visible="1" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Input 2" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Input 1" slicecount="1" values="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="Damper (Animation)" nodename="Damper (Animation)" componentmode="Hidden" id="261">
+   <BOUNDS type="Node" left="5235" top="10476" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="FilterTime" slicecount="1" values="2.5">
+   </PIN>
+   <PIN pinname="Go To Position" visible="1">
+   </PIN>
+   <PIN pinname="Position Out" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="262" srcpinname="Output" dstnodeid="261" dstpinname="Go To Position">
+   </LINK>
+   <LINK srcnodeid="266" srcpinname="alle bedingungen erfüllt" dstnodeid="262" dstpinname="Switch">
+   </LINK>
+   <LINK srcnodeid="261" srcpinname="Position Out" dstnodeid="264" dstpinname="Value">
+   </LINK>
+   <NODE systemname="R (Value)" nodename="R (Value)" componentmode="Hidden" id="260">
+   <BOUNDS type="Node" left="4260" top="8550" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Receive String" slicecount="1" values="global.LiedschaukelNr">
+   </PIN>
+   <PIN pinname="Input Value" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="EQ (Value)" nodename="EQ (Value)" componentmode="Hidden" id="259">
+   <BOUNDS type="Node" left="4290" top="8985" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input 1" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Input 2" slicecount="1" values="4">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="260" srcpinname="Input Value" dstnodeid="259" dstpinname="Input 1">
+   </LINK>
+   <LINK srcnodeid="259" srcpinname="Output" dstnodeid="266" dstpinname="schaukelnr">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="258" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="4935" top="8910" width="795" height="480">
+   </BOUNDS>
+   <BOUNDS type="Node" left="4935" top="8910" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="2" visible="1" values="0.11,0.13">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Vector Size" slicecount="1" values="2">
+   </PIN>
+   <PIN pinname="Rows" slicecount="1" values="2">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="258" srcpinname="Y Output Value" dstnodeid="266" dstpinname="Volume">
+   </LINK>
+   <LINK srcnodeid="185" srcpinname="Audio Out" dstnodeid="265" dstpinname="Input 1">
+   </LINK>
+   <LINK srcnodeid="265" srcpinname="Audio Out" dstnodeid="196" dstpinname="Input 3">
+   </LINK>
+   <LINK srcnodeid="267" srcpinname="Audio Out" dstnodeid="196" dstpinname="Input 2">
+   </LINK>
+   <LINK srcnodeid="189" srcpinname="Y Output Value" dstnodeid="266" dstpinname="schaukel aktiv">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="270" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="4995" top="14490" width="480" height="480">
+   </BOUNDS>
+   <BOUNDS type="Node" left="4995" top="14490" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Boolean">
+   </PIN>
+   <PIN pinname="Behavior" slicecount="1" values="Bang">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="played">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="266" srcpinname="played" dstnodeid="270" dstpinname="Y Input Value">
+   </LINK>
+   <NODE systemname="GetSlice (Spreads)" nodename="GetSlice (Spreads)" componentmode="Hidden" id="271">
+   <BOUNDS type="Node" left="4845" top="1185" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Index" slicecount="1" visible="1" values="4">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="182" srcpinname="Input Value" dstnodeid="271" dstpinname="Input">
+   <LINKPOINT x="4073" y="901">
+   </LINKPOINT>
+   </LINK>
+   <LINK srcnodeid="271" srcpinname="Output" dstnodeid="189" dstpinname="Y Input Value">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="274" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="6180" top="315" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="6180" top="315" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="4">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Integer">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="Switch (Value Input)" nodename="Switch (Value Input)" componentmode="Hidden" id="273">
+   <BOUNDS type="Node" left="5490" top="765" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input 1" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Input 2" slicecount="1" values="8">
+   </PIN>
+   <PIN pinname="Switch" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="274" srcpinname="Y Output Value" dstnodeid="273" dstpinname="Input 1">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="272" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="5280" top="180" width="450" height="495">
+   </BOUNDS>
+   <BOUNDS type="Node" left="5280" top="180" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Boolean">
+   </PIN>
+   <PIN pinname="Behavior" slicecount="1" values="Toggle">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="SwitchtoPlayback">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="272" srcpinname="Y Output Value" dstnodeid="273" dstpinname="Switch">
+   </LINK>
+   <LINK srcnodeid="273" srcpinname="Output" dstnodeid="271" dstpinname="Index">
+   </LINK>
+   <NODE systemname="R (Value)" nodename="R (Value)" componentmode="Hidden" id="275">
+   <BOUNDS type="Node" left="11355" top="510" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Receive String" slicecount="1" values="Sensorvalues.PB">
+   </PIN>
+   <PIN pinname="Input Value" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="Switch (Value Input)" nodename="Switch (Value Input)" componentmode="Hidden" id="276">
+   <BOUNDS type="Node" left="9720" top="960" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Switch" visible="1">
+   </PIN>
+   <PIN pinname="Input 1" visible="1">
+   </PIN>
+   <PIN pinname="Input 2" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="272" srcpinname="Y Output Value" dstnodeid="276" dstpinname="Switch">
+   </LINK>
+   <LINK srcnodeid="181" srcpinname="Input Value" dstnodeid="276" dstpinname="Input 1">
+   </LINK>
+   <LINK srcnodeid="275" srcpinname="Input Value" dstnodeid="276" dstpinname="Input 2">
+   </LINK>
+   <LINK srcnodeid="276" srcpinname="Output" dstnodeid="180" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="276" srcpinname="Output" dstnodeid="155" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="276" srcpinname="Output" dstnodeid="147" dstpinname="Input">
+   </LINK>
+   <NODE systemname="VSTHost (VAudio Source)" filename="%VVVV%\packs\VVVV.Audio\nodes\plugins\VVVV.Audio.VST.dll" nodename="VSTHost (VAudio Source)" componentmode="Hidden" id="277">
+   <BOUNDS type="Node" left="6900" top="4275" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Filename" slicecount="1" values="|..\..\..\..\..\..\..\..\Program Files\Native Instruments\VSTPlugins 64 bit\Kontakt 5.dll|">
+   </PIN>
+   <BOUNDS type="Window" left="0" top="0" width="16755" height="12075">
+   </BOUNDS>
+   <PIN pinname="Safe Data" slicecount="1" values="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">
+   </PIN>
+   <PIN pinname="Midi Events" visible="1">
+   </PIN>
+   <PIN pinname="Audio Out" visible="1">
+   </PIN>
+   <PIN pinname="Exposed Pins" slicecount="2" values=",|0||Sound - Marimba||Kontakt 5|">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="216" srcpinname="Events" dstnodeid="277" dstpinname="Midi Events">
+   </LINK>
+   <LINK srcnodeid="277" srcpinname="Audio Out" dstnodeid="213" dstpinname="Input Node">
+   </LINK>
+   <LINK srcnodeid="213" srcpinname="Output Node" dstnodeid="198" dstpinname="Input 1">
+   </LINK>
+   <NODE systemname="VSTHost (VAudio Source)" filename="%VVVV%\packs\VVVV.Audio\nodes\plugins\VVVV.Audio.VST.dll" nodename="VSTHost (VAudio Source)" componentmode="Hidden" id="278">
+   <BOUNDS type="Node" left="17085" top="5865" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Midi Events" visible="1">
+   </PIN>
+   <PIN pinname="Audio Out" visible="1">
+   </PIN>
+   <PIN pinname="Filename" slicecount="1" values="|..\..\..\..\..\..\..\..\Program Files\Native Instruments\VSTPlugins 64 bit\Absynth 5.dll|">
+   </PIN>
+   <PIN pinname="Safe Data" slicecount="1" values="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">
+   </PIN>
+   <BOUNDS type="Window" left="0" top="0" width="14070" height="9270">
+   </BOUNDS>
+   </NODE>
+   <LINK srcnodeid="233" srcpinname="Events" dstnodeid="278" dstpinname="Midi Events">
+   </LINK>
+   <LINK srcnodeid="278" srcpinname="Audio Out" dstnodeid="135" dstpinname="Input Node">
+   </LINK>
+   <NODE systemname="VSTHost (VAudio Source)" filename="%VVVV%\packs\VVVV.Audio\nodes\plugins\VVVV.Audio.VST.dll" nodename="VSTHost (VAudio Source)" componentmode="Hidden" id="279">
+   <BOUNDS type="Node" left="20925" top="5745" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Midi Events" visible="1">
+   </PIN>
+   <PIN pinname="Audio Out" visible="1">
+   </PIN>
+   <PIN pinname="Filename" slicecount="1" values="|..\..\..\..\..\..\..\..\Program Files\Native Instruments\VSTPlugins 64 bit\Absynth 5.dll|">
+   </PIN>
+   <PIN pinname="Safe Data" slicecount="1" values="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">
+   </PIN>
+   <BOUNDS type="Window" left="0" top="0" width="15735" height="11070">
+   </BOUNDS>
+   </NODE>
+   <LINK srcnodeid="127" srcpinname="Events" dstnodeid="279" dstpinname="Midi Events">
+   </LINK>
+   <LINK srcnodeid="279" srcpinname="Audio Out" dstnodeid="126" dstpinname="Input Node">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="281" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="10215" top="4890" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="10215" top="4890" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="177" srcpinname="Maximum" dstnodeid="281" dstpinname="Y Input Value">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="282" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="9690" top="5385" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="9690" top="5385" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="180" srcpinname="Output" dstnodeid="282" dstpinname="Y Input Value">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="283" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="10200" top="2430" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="10200" top="2430" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="180" srcpinname="Output" dstnodeid="283" dstpinname="Y Input Value">
+   </LINK>
+   </PATCH>

@@ -1,0 +1,14 @@
+# vvvv runtime (never in repo)
+vvvv/
+
+# Fat / binary assets
+Assets/
+**/Fat*Assets/
+**/*.dll
+**/*.pdb
+**/bin/
+**/obj/
+
+# OS
+.DS_Store
+Thumbs.db
