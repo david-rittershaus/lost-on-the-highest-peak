@@ -6,7 +6,7 @@ Code repository for an interactive sound installation — 8 Arduino microcontrol
 
 **Arduino:** Power over Ethernet, UDP to vvvv. Requires Adafruit 9DOF libraries (LSM303, L3GD20) and Arduino Ethernet.
 
-[![lost on the highest peak - David Rittershaus](https://vumbnail.com/190703905.jpg)](https://vimeo.com/190703905)
+[lost on the highest peak - David Rittershaus](https://vimeo.com/190703905)
 
 *Naxoshalle, Frankfurt, 2016*
 
@@ -19,7 +19,6 @@ Code repository for an interactive sound installation — 8 Arduino microcontrol
 
 ![mof01](docs/images/mof01.jpg)
 ![mof02](docs/images/mof02.jpg)
-![mof03](docs/images/mof03.jpg)
 ![mof04](docs/images/mof04.jpg)
 
 
